@@ -8,3 +8,7 @@ F
 #Reporting
 
 #Settings
+
+#Browser
+
+#Parallel testing
