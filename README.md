@@ -1,13 +1,11 @@
 #Instruction to run tests:
 
  + Prerequisite: Visual studio, Windows machine, PowerShell enabled
- + Install java sdk and set the environment variable,
  
  1. Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
- 2. Run ~\CompareTheMarket\RunTest.ps1 power shell file to run existing dll from      
-   ~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
+ 2. Alternatively (To get reports as well) Run ~\CompareTheMarket\RunTest.ps1 powerShell file (administrator mode) to run existing dll       from ~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
    
-   command: right click "Run with PowerShell" on RunTest.ps1 file
+   command: right click "Run with PowerShell" (administrator mode) on RunTest.ps1 file in 
    
    Test result will be stored in ~\CompareTheMarket\TestResults location. 
    Open ~/CompareTheMarket/TestResults/Index.html to view living documentation site using pickles library 
@@ -17,8 +15,7 @@
 
 Configuration 
 -------------
-Settings/Settings.csx file is used to manage Base Url, current browser and capabilities for remote browser and Grid url. Test based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
-
+Settings/Settings.csx file is used to manage* Baseurl*, current *Browser* and capabilities for remote browser and Grid url.However this solution based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
 
 ```
 #r "CompareTheMarket.dll"
@@ -107,24 +104,22 @@ Scripting:
 3.	Ability to discard/add specific element such as bdd library, browser/mobile library
 
 4.	Reliability:
-  + Thread.sleep avoided at all cost to reduce test run time instead used explit wait using webdriverwait method 
+  + Thread.sleep avoided at all cost to reduce test run time instead used explicitt wait using webdriverwait method 
 
 
 #Test Coverage
 
-1.	Tests are granular to explain to follow user journey, in order to add/remove steps and create more possible scenarios. For more high level BA/PO centric Acceptance criteria steps can be encapsulated using Specflow features.
+1.	Tests are granular to be able to follow user journey, in order to add/remove steps and create more possible scenarios quickly. For more high level BA/PO centric Acceptance criteria steps can be encapsulated by Step definition file inheriting TechTalk.SpecFlow.Steps ("Compare electricity and gas prices" created using such method)
 
-2.	Example used to get maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. As Identified SelectCurrentEnergySupplier.feature are (marked as ignored) however I’ve reused the steps as my background  for other test 
+2.	Example used to extract maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. As Identified SelectCurrentEnergySupplier.feature are (marked as ignored) however I’ve reused the steps as my background  for other test. Using example I have in total 11 different possiblities
 
 ![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
 
-In my opinion the key user journey need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
+3. In my opinion the key user journey we need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
 
-1.	All the possible permutation and combination of user journey for electricity 
-2.	All the possible permutation and combination of user journey for Gas 
-3.	User journey when both Gas and Electricity is chosen
-
-Using example I have total 11 different possiblities
++	All the possible permutation and combination of user journey for electricity 
++	All the possible permutation and combination of user journey for Gas 
++	User journey when both Gas and Electricity is chosen
 
 ![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareElectricityPrices.png)
 ![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareGasPrices.png)
@@ -132,11 +127,13 @@ Using example I have total 11 different possiblities
 
 
 Caveat: 
-1.	Readability is not the best for these tests but as mentioned these can be broken down and encapsulated (using specflow) with little effort. It is really easy to follow all the possible outcome with one quick look in the example table. Step are written in first person and often form a grammatically correct sentence
+1.	Readability is not the best for these tests but as mentioned these can be broken down and encapsulated (using specflow) with little effort. Having said that it is really easy to follow all the possible outcome with one quick look in the example table and '<placeholder>' value can easyly be replaced with actual value to improve readabilty. 
 
-#Edge cases not tested
+Step are written in first person and often form a grammatically correct sentence
 
-Edge cases not covered:
+Edge cases not tested
+----------------------
+FOllowing seemed to me lower priority than 3 I've already identified as these may not the most common user journey.
 
 Scenario: Compare electricity and gas prices without bill
 Scenario: Compare electricity and gas prices without bill and current usage
