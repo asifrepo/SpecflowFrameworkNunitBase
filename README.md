@@ -3,7 +3,9 @@
 Prerequisite: Visual studio, Windows machine, PowerShell enabled
 Install java sdk and set the environment variable,
 •	Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
-•	Run ~\CompareTheMarket\RunTest.ps1 power shell file to run existing dll from ~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
+•	Run ~\CompareTheMarket\RunTest.ps1 power shell file to run existing dll from
+
+~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
 Test result will be stored in ~\CompareTheMarket\TestResults location. 
 Open /CompareTheMarket/TestResults/Index.html to view living documentation site using pickles library 
 Open /CompareTheMarket/TestResults/SpecflowTestResult.html for specflow test report
@@ -13,7 +15,8 @@ Open /CompareTheMarket/TestResults/ReportUnitTestResult.html for report unit tes
 
 # FrameWork
 
-1.	Selenium to run browser test ()
+Compnents:
+1.	Selenium to run browser test 
 2.	Specflow to run Bdd scenario
 3.	Config-r for configuration management
 4.	Fluent assertion
