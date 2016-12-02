@@ -15,7 +15,8 @@
 
 Configuration 
 -------------
-Settings/Settings.csx file is used to manage *Baseurl*, current *Browser* and *Capabilities* for remote browser and Grid url.Even though  remote driver is implmeneted but for clarity of this solution based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
+Settings/Settings.csx file is used to manage *Baseurl*, current *Browser* and *Capabilities* for remote browser and *GridUrl*.Even though  remote driver is implmeneted but for clarity of this solution based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
+apart from Add("ScreenRecord","off") which can be commneted please keep the other settings as it is
 
 ```
 #r "CompareTheMarket.dll"
@@ -37,7 +38,7 @@ Add("GridUrl", "http://****:**/wd/hub");
 
 Add("Capabilities", setup);
 
-Add("ScreenRecord","off")
+//Add("ScreenRecord","off")
 
 ```
 
