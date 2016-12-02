@@ -2,7 +2,7 @@
 
  + Prerequisite: Visual studio, Windows machine, PowerShell enabled
  + Install java sdk and set the environment variable,
- + Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
+ 1. Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
    Run ~\CompareTheMarket\RunTest.ps1 power shell file to run existing dll from
    ~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
    Test result will be stored in ~\CompareTheMarket\TestResults location. 
