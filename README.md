@@ -108,7 +108,6 @@ However in my opinion the key user journey need to cover is all the possible per
 3.	User journey when both Gas and Electricity is chosen
 Using example I have total 11 tests
 
-
 Feature: Compare Electricity prices
 	In order to compare electricity prices
 	As a user
@@ -153,7 +152,6 @@ Scenario Outline: Compare Electricity prices with all different permutations and
 	| EnergyPlan Paper Billing | No        | Monthly Direct Debit | Yes                    | kWh           | 2000            |                   |      | Annually  |                 | All tariffs       | All payment types      |
 	| EnergyPlan Paper Billing | Yes       | Monthly Direct Debit | Yes                    | £             |                 |                   | 61   | Monthly   | 1 October, 2015 | All tariffs       | All payment types      |
 	| EnergyPlan Paper Billing | Yes       | Monthly Direct Debit | Yes                    | £             |                 |                   | 734  | Annually  |                 | All tariffs       | All payment types      |
-
 
 Feature: Compare Gas prices
 	In order to compare gas prices
