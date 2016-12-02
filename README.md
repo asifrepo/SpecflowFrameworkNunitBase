@@ -108,7 +108,8 @@ Framework developed based on following principle:
 
   1.	Tests are granular to be able to follow user journey, in order to add/remove steps and create more possible scenarios quickly. For more high level BA/PO centric Acceptance criteria steps can be encapsulated by Step definition file inheriting TechTalk.SpecFlow.Steps ("Compare electricity and gas prices" feature created using such method)
 
-  2.	Scenario Outline Examples used to extract maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. As Identified SelectCurrentEnergySupplier.feature are (marked as ignored) however I’ve reused the steps as my background  for other test. Using example I have in total 11 different possiblities
+  2.	Scenario Outline Examples used to extract maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. As Identified SelectCurrentEnergySupplier.feature are (marked as ignored) however I’ve reused the steps as my background  for other test. Using example I have in total 11 different possiblities.
+  
 ![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
 
   3. In my opinion the key user journey we need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
