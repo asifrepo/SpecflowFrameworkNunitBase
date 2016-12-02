@@ -88,8 +88,8 @@ Package.config:
 
 Framework developed based on following principle:
 ------------------------------------------------
- 1. Usability: How easy it is to write tests so that its quicker for a new member to follow  
- Solution is broken down to following folders:
+ 1. Usability: I focused how easy it is to write tests so that its quicker for a new member to follow. 
+    Solution is broken down to following folders:
  
   +  Feature: all the feature files
   +  Steps: step definition –no selenium references only the page classes and fluent assertion, usually each step definition only have   one  responsibility
@@ -101,7 +101,7 @@ Framework developed based on following principle:
   + Script are written in as expressively without any need to comment 
   + Ability to discard/add specific element such as bdd library, browser/mobile library
 
-3.	Reliability:
+ 3.	Reliability:
   + Thread.sleep avoided at all cost to reduce test run time instead used explicitt wait using webdriverwait method 
 
 #Test Coverage
@@ -112,7 +112,7 @@ Framework developed based on following principle:
 
 ![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
 
-  3. In my opinion the key user journey we need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
+   3. In my opinion the key user journey we need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
 
   +	 All the possible permutation and combination of user journey for electricity 
   +	 All the possible permutation and combination of user journey for Gas 
