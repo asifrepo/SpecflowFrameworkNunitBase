@@ -118,7 +118,7 @@ Background:
     Given I am in 'https://energy.comparethemarket.com/energy/v2/?AFFCLIE=TST' page
     And I have entered 'PE2 6YS' as my postcode
     And I select find postcode option
-	And  I select bill availability option as 'Yes, I have my bill'
+    And I select bill availability option as 'Yes, I have my bill'
     And I select energy type option as 'Electricity only' 
     And I select next option with preselected energy  
     And I am navigated to 'Your Energy' page 
