@@ -1,9 +1,9 @@
 #Instruction to run tests:
 
-Prerequisite: Visual studio, Windows machine, PowerShell enabled
-Install java sdk and set the environment variable,
-•	Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
-•	Run ~\CompareTheMarket\RunTest.ps1 power shell file to run existing dll from
+ + Prerequisite: Visual studio, Windows machine, PowerShell enabled
+ + Install java sdk and set the environment variable,
+ + Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
+ + Run ~\CompareTheMarket\RunTest.ps1 power shell file to run existing dll from
 
 ~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
 Test result will be stored in ~\CompareTheMarket\TestResults location. 
@@ -15,12 +15,12 @@ Open /CompareTheMarket/TestResults/ReportUnitTestResult.html for report unit tes
 
 # FrameWork
 
-Compnents:
-1.Selenium to run browser test 
-2.Specflow to run Bdd scenario
-3.Config-r for configuration management
-4.Fluent assertion
-
+Components:
+1. Selenium to run browser test s
+2. Spec flow to run Gherkin scenario
+3. Config-R for configuration management
+4. Fluent assertion specify readable  expected outcome
+5. Nunit 3 unit testing framewor  
 
 App.config:
 <package id="Common.Logging" version="2.1.2" targetFramework="net45" />
