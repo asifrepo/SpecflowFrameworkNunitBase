@@ -84,6 +84,10 @@ However in my opinion the key user journey need to cover is all the possible per
 3.	User journey when both Gas and Electricity is chosen
 Using example I have total 11 tests
 
+![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareElectricityPrices.png)
+![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareGasPrices.png)
+![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareElectricityAndGasPricess.png)
+
 
 Caveat: 
 1.	Readability is not the best for these tests but as mentioned these can be broken down and encapsulated (using specflow) with little effort however it is really easy to follow all the possible outcome with one quick look i in example table. Step are written in first person and often form a grammatically correct sentence
