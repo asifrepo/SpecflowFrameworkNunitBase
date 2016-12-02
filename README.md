@@ -83,23 +83,23 @@ Feature: Select Current Energy Supplier
     I want to select my current energy provider's information
 
 Scenario Outline: Select my current energy supplier
-    Given I am in 'https://energy.comparethemarket.com/energy/v2/?AFFCLIE=TST' page
-    And I have entered 'PE2 6YS' as my postcode
-    And I select find postcode option
-    And I select bill availability option as '<Bill availability>'
-    And I select energy type option as '<Energy type>' 
-    And I tick '<Same supplier>' same supplier question
-    When I select next option with preselected energy  
-    Then I should be navigated to 'Your Energy' page 
-    Examples: 
-    |Bill availability            |Energy type      | Same supplier|
-    |Yes, I have my bill          |Gas & Electricity|      Yes     |
-    |Yes, I have my bill          |Gas & Electricity|      No      |
-    |No, I don’t have my bill     |Gas & Electricity|              |
-    |Yes, I have my bill          |Electricity only |              |
-    |No, I don’t have my bill     |Electricity only |              |
-    |Yes, I have my bill          |Gas only         |              |
-    |No, I don’t have my bill     |Gas only         |              |
+Given I am in 'https://energy.comparethemarket.com/energy/v2/?AFFCLIE=TST' page
+And I have entered 'PE2 6YS' as my postcode
+And I select find postcode option
+And I select bill availability option as '<Bill availability>'
+And I select energy type option as '<Energy type>' 
+And I tick '<Same supplier>' same supplier question
+When I select next option with preselected energy  
+Then I should be navigated to 'Your Energy' page 
+Examples: 
+|Bill availability            |Energy type      | Same supplier|
+|Yes, I have my bill          |Gas & Electricity|      Yes     |
+|Yes, I have my bill          |Gas & Electricity|      No      |
+|No, I don’t have my bill     |Gas & Electricity|              |
+|Yes, I have my bill          |Electricity only |              |
+|No, I don’t have my bill     |Electricity only |              |
+|Yes, I have my bill          |Gas only         |              |
+|No, I don’t have my bill     |Gas only         |              |
     
     
 However in my opinion the key user journey need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features
