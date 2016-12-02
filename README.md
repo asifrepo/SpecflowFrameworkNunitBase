@@ -84,9 +84,9 @@ However in my opinion the key user journey need to cover is all the possible per
 3.	User journey when both Gas and Electricity is chosen
 Using example I have total 11 tests
 
-![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareElectricityPrices.png)
-![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareGasPrices.png)
-![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareElectricityAndGasPricess.png)
+![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareElectricityPrices.png)
+![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareGasPrices.png)
+![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareElectricityAndGasPricess.png)
 
 
 Caveat: 
@@ -94,6 +94,8 @@ Caveat:
 
 
 #Edge cases not tested
+
+![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/EdgeCases.png)
 
 Edge cases not covered:
 
