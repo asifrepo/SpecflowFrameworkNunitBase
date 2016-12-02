@@ -236,6 +236,7 @@ Feature: Compare Electricity And Gas prices
 	And I should see my price comparison results
 
 
+
 Caveat: 
 1.	Readability is not the best for these tests but as mentioned these can be broken down and encapsulated (using specflow) with little effort however it is really easy to follow all the possible outcome with one quick look i in example table. Step are written in first person and often form a grammatically correct sentence
 
