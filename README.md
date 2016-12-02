@@ -16,10 +16,10 @@ Open /CompareTheMarket/TestResults/ReportUnitTestResult.html for report unit tes
 # FrameWork
 
 Compnents:
-1.	Selenium to run browser test 
-2.	Specflow to run Bdd scenario
-3.	Config-r for configuration management
-4.	Fluent assertion
+1.Selenium to run browser test 
+2.Specflow to run Bdd scenario
+3.Config-r for configuration management
+4.Fluent assertion
 
 
 App.config:
