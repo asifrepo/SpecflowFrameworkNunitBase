@@ -76,6 +76,7 @@ Thread.sleep avoided in all cost to reduce test run time webdriverwait method us
 1.	Tests are granular to explain what’s going on, in order to add/remove steps. For more BA centric Acceptance criteria steps can be encapsulated using Specflow features.
 2.	Example used to get maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. Identified SelectCurrentEnergySupplier.feature  are (marked as ignored) however I’ve reused the steps as my background  for other test 
 
+![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
 
 However in my opinion the key user journey need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features
 1.	All the possible permutation and combination of user journey for electricity 
