@@ -6,19 +6,23 @@
  1. Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
  2. Run ~\CompareTheMarket\RunTest.ps1 power shell file to run existing dll from      
    ~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
+   
    command: right click "Run with PowerShell" on RunTest.ps1 file
    
    Test result will be stored in ~\CompareTheMarket\TestResults location. 
-   Open /CompareTheMarket/TestResults/Index.html to view living documentation site using pickles library 
-   Open /CompareTheMarket/TestResults/SpecflowTestResult.html for specflow test report
-   Open /CompareTheMarket/TestResults/ReportUnitTestResult.html for report unit test report
-   
+   Open ~/CompareTheMarket/TestResults/Index.html to view living documentation site using pickles library 
+   Open ~/CompareTheMarket/TestResults/SpecflowTestResult.html for specflow test report
+   Open ~/CompareTheMarket/TestResults/ReportUnitTestResult.html for report unit test report
+   Screenshots for failed tests will be stored in ~/CompareTheMarket/FailedScreenshot
+
+Configuration 
+-------------
 # FrameWork
 
 Components:
 -----------
 1. Selenium to run browser tests
-2. Spec flow to run Gherkin scenario
+2. Spec flow to write Gherkin scenarios
 3. Config-R for configuration management
 4. Fluent assertion specify readable expected outcome
 5. Nunit 3 unit testing framework  
@@ -53,13 +57,14 @@ Package.config:
   <package id="ReportUnit" version="1.2.1" />
   
 Framework developed based on following principle:
+------------------------------------------------
 1.	Usability: How easy it is to write scripts. Solution is broken down to following folders:
-Feature: all the feature files
-Steps: step definition –no selenium references only the page classes and fluent assertion, each step definition only have one responsibility
-Pages: Most of the selenium references in there. 
-Pages are mapped using Page object model, Page elements separated where possible, 
-Improvement: create multiple interface implement abstract factory pattern to support IE browser script for reduced maintainability
-Page function has single responsibility as well
+    Feature: all the feature files
+    Steps: step definition –no selenium references only the page classes and fluent assertion, each step definition only have one        responsibility
+    Pages: Most of the selenium references in there. Pages are mapped using Page object model, Page elements separated where possible, 
+    Improvement: create multiple interface implement abstract factory pattern to support IE browser script for reduced maintainability
+    Page function has single responsibility as well
+
 Scripting: 
 
 
@@ -75,7 +80,8 @@ Thread.sleep avoided in all cost to reduce test run time webdriverwait method us
 
 #Test Coverage
 
-1.	Tests are granular to explain what’s going on, in order to add/remove steps. For more BA centric Acceptance criteria steps can be encapsulated using Specflow features.
+1.	Tests are granular to explain what’s going on, in order to add/remove steps. For more high level BA/PO centric Acceptance criteria steps can be encapsulated using Specflow features.
+
 2.	Example used to get maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. Identified SelectCurrentEnergySupplier.feature  are (marked as ignored) however I’ve reused the steps as my background  for other test 
 
 ![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
