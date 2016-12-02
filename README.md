@@ -95,9 +95,6 @@ Framework developed based on following principle:
  + Feature: all the feature files
  + Steps: step definition –no selenium references only the page classes and fluent assertion, usually each step definition only have one            responsibility
  + Pages: Most of the selenium references in there. Pages are mapped using Page object model, Page elements separated where possible.
- 
-    Improvement: create multiple interface implement abstract factory pattern to support IE browser script for reduced maintainability
-    Page function has single responsibility as well
     
 Scripting: 
 
@@ -152,6 +149,9 @@ I tried to follow Setup (Given), Exercise (When), Verify (Then) method for my Gh
 Improvement:
 I have tried make sure Ive written clean code and following good practises such (DRY, SOLID) with best of my abilities. 
 
-An obvious improvement for this framework will be bespoke Inversion of control and dependency injection to support parallel testing. 
+An obvious improvement for this framework will be bespoke Inversion of control and dependency injection to support parallel testing.
+
+Create multiple interface implement abstract factory pattern to support IE browser script for reduced maintainability
+
 
 
