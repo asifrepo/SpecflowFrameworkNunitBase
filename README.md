@@ -95,7 +95,7 @@ Framework developed based on following principle:
   +  Steps: step definition –no selenium references only the page classes and fluent assertion, usually each step definition only have   one  responsibility
   + Pages: Most of the selenium references in there. Pages are mapped using Page object model, Page elements separated where possible.   
 
-2.	Maintainability : 
+ 2.	Maintainability : 
   + Static method outside framework avoided 
   + Possible to package Framework folder and distribute between teams 
   + Script are written in as expressively without any need to comment 
@@ -112,7 +112,7 @@ Framework developed based on following principle:
 
 ![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
 
- 3. In my opinion the key user journey we need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
+  3. In my opinion the key user journey we need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
 
   +	 All the possible permutation and combination of user journey for electricity 
   +	 All the possible permutation and combination of user journey for Gas 
