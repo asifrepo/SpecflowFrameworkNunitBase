@@ -2,25 +2,28 @@
 
  + Prerequisite: Visual studio, Windows machine, PowerShell enabled
  + Install java sdk and set the environment variable,
-1.Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
-2.Run ~\CompareTheMarket\RunTest.ps1 power shell file to run existing dll from
-~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
+ 
+ 1. Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
+ 2. Run ~\CompareTheMarket\RunTest.ps1 power shell file to run existing dll from      
+   ~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
+   command: right click "Run with PowerShell" on RunTest.ps1 file
+   
    Test result will be stored in ~\CompareTheMarket\TestResults location. 
    Open /CompareTheMarket/TestResults/Index.html to view living documentation site using pickles library 
    Open /CompareTheMarket/TestResults/SpecflowTestResult.html for specflow test report
    Open /CompareTheMarket/TestResults/ReportUnitTestResult.html for report unit test report
-
-
-
+   
 # FrameWork
 
 Components:
-1. Selenium to run browser test s
+-----------
+1. Selenium to run browser tests
 2. Spec flow to run Gherkin scenario
 3. Config-R for configuration management
-4. Fluent assertion specify readable  expected outcome
-5. Nunit 3 unit testing framewor  
+4. Fluent assertion specify readable expected outcome
+5. Nunit 3 unit testing framework  
 
+Library used:
 App.config:
 <package id="Common.Logging" version="2.1.2" targetFramework="net45" />
   <package id="ConfigR" version="0.14.0" targetFramework="net45" />
