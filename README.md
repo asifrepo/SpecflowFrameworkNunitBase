@@ -53,34 +53,38 @@ Components:
 5. Nunit 3 unit testing framework  
 
 Library used:
- App.config:
-  <package id="Common.Logging" version="2.1.2" targetFramework="net45" />
-   <package id="ConfigR" version="0.14.0" targetFramework="net45" />
-   <package id="FluentAssertions" version="4.17.0" targetFramework="net45" />
-   <package id="ImpromptuInterface" version="6.2.2" targetFramework="net45" />
-   <package id="NUnit" version="3.5.0" targetFramework="net45" />
-   <package id="ScriptCs.Contracts" version="0.16.1" targetFramework="net45" />
-   <package id="ScriptCs.Core" version="0.16.1" targetFramework="net45" />
-   <package id="ScriptCs.Engine.Roslyn" version="0.16.1" targetFramework="net45" />
-   <package id="Selenium.Support" version="3.0.1" targetFramework="net45" />
-   <package id="Selenium.WebDriver" version="3.0.1" targetFramework="net45" />
-   <package id="Selenium.WebDriver.ChromeDriver" version="2.25.0.8" targetFramework="net45" />
-   <package id="Selenium.WebDriver.MicrosoftWebDriver" version="10.0.14393.0" targetFramework="net45" />
-   <package id="SpecFlow" version="2.1.0" targetFramework="net45" />
-   <package id="SpecFlow.Assist.Dynamic" version="1.2.0" targetFramework="net45" />
-   <package id="SpecFlow.NUnit" version="2.1.0" targetFramework="net45" />
-  
+
+App.config:
+
+```
+<package id="Common.Logging" version="2.1.2" targetFramework="net45" />
+<package id="ConfigR" version="0.14.0" targetFramework="net45" />
+<package id="FluentAssertions" version="4.17.0" targetFramework="net45" />
+<package id="ImpromptuInterface" version="6.2.2" targetFramework="net45" />
+<package id="NUnit" version="3.5.0" targetFramework="net45" />
+<package id="ScriptCs.Contracts" version="0.16.1" targetFramework="net45" />
+<package id="ScriptCs.Core" version="0.16.1" targetFramework="net45" />
+<package id="ScriptCs.Engine.Roslyn" version="0.16.1" targetFramework="net45" />
+<package id="Selenium.Support" version="3.0.1" targetFramework="net45" />
+<package id="Selenium.WebDriver" version="3.0.1" targetFramework="net45" />
+<package id="Selenium.WebDriver.ChromeDriver" version="2.25.0.8" targetFramework="net45" />
+<package id="Selenium.WebDriver.MicrosoftWebDriver" version="10.0.14393.0" targetFramework="net45" />
+<package id="SpecFlow" version="2.1.0" targetFramework="net45" />
+<package id="SpecFlow.Assist.Dynamic" version="1.2.0" targetFramework="net45" />
+<package id="SpecFlow.NUnit" version="2.1.0" targetFramework="net45" />
+```
 Package.config:
-  <package id="NUnit.Console" version="3.5.0" />
-  <package id="NUnit.ConsoleRunner" version="3.5.0" />
-  <package id="NUnit.Extension.NUnitProjectLoader" version="3.5.0" />
-  <package id="NUnit.Extension.NUnitV2Driver" version="3.5.0" />
-  <package id="NUnit.Extension.NUnitV2ResultWriter" version="3.5.0" />
-  <package id="NUnit.Extension.TeamCityEventListener" version="1.0.2" />
-  <package id="NUnit.Extension.VSProjectLoader" version="3.5.0" />
-  <package id="Pickles" version="2.10.0" />
-  <package id="ReportUnit" version="1.2.1" />
-  
+```
+<package id="NUnit.Console" version="3.5.0" />
+<package id="NUnit.ConsoleRunner" version="3.5.0" />
+<package id="NUnit.Extension.NUnitProjectLoader" version="3.5.0" />
+<package id="NUnit.Extension.NUnitV2Driver" version="3.5.0" />
+<package id="NUnit.Extension.NUnitV2ResultWriter" version="3.5.0" />
+<package id="NUnit.Extension.TeamCityEventListener" version="1.0.2" />
+<package id="NUnit.Extension.VSProjectLoader" version="3.5.0" />
+<package id="Pickles" version="2.10.0" />
+<package id="ReportUnit" version="1.2.1" />
+ ``` 
  # FrameWork
 Framework developed based on following principle:
 ------------------------------------------------
