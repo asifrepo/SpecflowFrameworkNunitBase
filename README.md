@@ -17,7 +17,7 @@
 
 Configuration 
 -------------
-  Settings/Settings.csx file is used to manage Base Url, current browser and capabilities for remote browser and Grid url. Test based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
+Settings/Settings.csx file is used to manage Base Url, current browser and capabilities for remote browser and Grid url. Test based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
 
 
 ```
@@ -84,43 +84,50 @@ Package.config:
 <package id="NUnit.Extension.VSProjectLoader" version="3.5.0" />
 <package id="Pickles" version="2.10.0" />
 <package id="ReportUnit" version="1.2.1" />
- ``` 
- # FrameWork
+ ```
+ 
+# FrameWork
+
 Framework developed based on following principle:
 ------------------------------------------------
-1.	Usability: How easy it is to write scripts. Solution is broken down to following folders:
-    Feature: all the feature files
-    Steps: step definition –no selenium references only the page classes and fluent assertion, each step definition only have one        responsibility
-    Pages: Most of the selenium references in there. Pages are mapped using Page object model, Page elements separated where possible, 
+ 1. Usability: How easy it is to write tests so that its quicker for a new member to follow  
+ Solution is broken down to following folders:
+ + Feature: all the feature files
+ + Steps: step definition –no selenium references only the page classes and fluent assertion, usually each step definition only have one            responsibility
+ + Pages: Most of the selenium references in there. Pages are mapped using Page object model, Page elements separated where possible.
+ 
     Improvement: create multiple interface implement abstract factory pattern to support IE browser script for reduced maintainability
     Page function has single responsibility as well
-
+    
 Scripting: 
 
 
 2.	Maintainability : 
-Support multiple browser input
-Static method outside framework avoided 
+  + Static method outside framework avoided 
+  + Possible to package framework and distribute between teams 
+  + 
 
-3.	Ability to discard/add specific element such as bdd library, browser/mobile library 
+3.	Ability to discard/add specific element such as bdd library, browser/mobile library
+
 4.	Reliability:
-Thread.sleep avoided in all cost to reduce test run time webdriverwait method used instead
-
+  + Thread.sleep avoided at all cost to reduce test run time instead used explit wait using webdriverwait method 
 
 
 #Test Coverage
 
-1.	Tests are granular to explain what’s going on, in order to add/remove steps. For more high level BA/PO centric Acceptance criteria steps can be encapsulated using Specflow features.
+1.	Tests are granular to explain to follow user journey, in order to add/remove steps and create more possible scenarios. For more high level BA/PO centric Acceptance criteria steps can be encapsulated using Specflow features.
 
-2.	Example used to get maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. Identified SelectCurrentEnergySupplier.feature  are (marked as ignored) however I’ve reused the steps as my background  for other test 
+2.	Example used to get maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. As Identified SelectCurrentEnergySupplier.feature are (marked as ignored) however I’ve reused the steps as my background  for other test 
 
 ![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
 
-However in my opinion the key user journey need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features
+In my opinion the key user journey need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
+
 1.	All the possible permutation and combination of user journey for electricity 
 2.	All the possible permutation and combination of user journey for Gas 
 3.	User journey when both Gas and Electricity is chosen
-Using example I have total 11 tests
+
+Using example I have total 11 different possiblities
 
 ![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareElectricityPrices.png)
 ![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/CompareGasPrices.png)
@@ -128,24 +135,23 @@ Using example I have total 11 tests
 
 
 Caveat: 
-1.	Readability is not the best for these tests but as mentioned these can be broken down and encapsulated (using specflow) with little effort however it is really easy to follow all the possible outcome with one quick look i in example table. Step are written in first person and often form a grammatically correct sentence
-
+1.	Readability is not the best for these tests but as mentioned these can be broken down and encapsulated (using specflow) with little effort. It is really easy to follow all the possible outcome with one quick look in the example table. Step are written in first person and often form a grammatically correct sentence
 
 #Edge cases not tested
-
-![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/EdgeCases.png)
 
 Edge cases not covered:
 
 Scenario: Compare electricity and gas prices without bill
 Scenario: Compare electricity and gas prices without bill and current usage
 
+![Image](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/EdgeCases.png)
+
+Given-When-Then:
+I tried to follow Setup (Given), Exercise (When), Verify (Then) method for my Gherkgin syntax
+
 Improvement:
-Inversion of control and dependency injection
+I have tried make sure Ive written clean code and following good practises such (DRY, SOLID) with best of my abilities. 
+
+An obvious improvement for this framework will be bespoke Inversion of control and dependency injection to support parallel testing. 
 
 
-#Reporting
-
-#Settings
-
-#Browser
