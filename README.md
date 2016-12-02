@@ -5,7 +5,7 @@
  1. Use visual studio test  runner/ resharper to test runner to run tests in VS IDE
  2. Alternatively (To get reports as well) Run ~\CompareTheMarket\RunTest.ps1 powerShell file (administrator mode) to run existing dll       from ~\CompareTheMarket\CompareTheMarket\bin\Debug\CompareTheMarket.dll location
    
-   command: right click "Run with PowerShell" (administrator mode) on RunTest.ps1 file in 
+   command: right click "Run with PowerShell" (administrator mode) on RunTest.ps1 file  
    
    Test result will be stored in ~\CompareTheMarket\TestResults location. 
    Open ~/CompareTheMarket/TestResults/Index.html to view living documentation site using pickles library 
@@ -15,8 +15,8 @@
 
 Configuration 
 -------------
-Settings/Settings.csx file is used to manage *Baseurl*, current *Browser* and *Capabilities* for remote browser and *GridUrl*.Even though  remote driver is implmeneted but for clarity of this solution based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
-apart from Add("ScreenRecord","off") which can be commneted please keep the other settings as it is
+Settings/Settings.csx file is used to manage *Baseurl*, current *Browser* and *Capabilities* for remote browser and *GridUrl*.Even though  remote driver is implmeneted but for clarity of this solution based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion in machine) 
+apart from Add("ScreenRecord","off") which can be commented out please keep the other settings as it is
 
 ```
 #r "CompareTheMarket.dll"
@@ -92,27 +92,22 @@ Framework developed based on following principle:
  Solution is broken down to following folders:
  + Feature: all the feature files
  + Steps: step definition –no selenium references only the page classes and fluent assertion, usually each step definition only have one            responsibility
- + Pages: Most of the selenium references in there. Pages are mapped using Page object model, Page elements separated where possible.
-    
-Scripting: 
-
+ + Pages: Most of the selenium references in there. Pages are mapped using Page object model, Page elements separated where possible.   
 
 2.	Maintainability : 
   + Static method outside framework avoided 
-  + Possible to package framework and distribute between teams 
-  + 
-
-3.	Ability to discard/add specific element such as bdd library, browser/mobile library
+  + Possible to package Framework folder and distribute between teams 
+  + Script are written in as expressively without any need to comment 
+  + Ability to discard/add specific element such as bdd library, browser/mobile library
 
 4.	Reliability:
   + Thread.sleep avoided at all cost to reduce test run time instead used explicitt wait using webdriverwait method 
 
-
 #Test Coverage
 
-1.	Tests are granular to be able to follow user journey, in order to add/remove steps and create more possible scenarios quickly. For more high level BA/PO centric Acceptance criteria steps can be encapsulated by Step definition file inheriting TechTalk.SpecFlow.Steps ("Compare electricity and gas prices" created using such method)
+1.	Tests are granular to be able to follow user journey, in order to add/remove steps and create more possible scenarios quickly. For more high level BA/PO centric Acceptance criteria steps can be encapsulated by Step definition file inheriting TechTalk.SpecFlow.Steps ("Compare electricity and gas prices" feature created using such method)
 
-2.	Example used to extract maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. As Identified SelectCurrentEnergySupplier.feature are (marked as ignored) however I’ve reused the steps as my background  for other test. Using example I have in total 11 different possiblities
+2.	Scenario Outline Examples used to extract maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. As Identified SelectCurrentEnergySupplier.feature are (marked as ignored) however I’ve reused the steps as my background  for other test. Using example I have in total 11 different possiblities
 
 ![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
 
