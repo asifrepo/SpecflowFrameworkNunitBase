@@ -102,13 +102,13 @@ Framework developed based on following principle:
   + Ability to discard/add specific element such as bdd library, browser/mobile library
 
  3.	Reliability:
-  + Thread.sleep avoided at all cost to reduce test run time instead used explicitt wait using webdriverwait method 
+  + Thread.sleep avoided at all cost to reduce test run time instead used explicit wait using webdriverwait method 
 
 #Test Coverage
 
   1.	Tests are granular to be able to follow user journey, in order to add/remove steps and create more possible scenarios quickly. For more high level BA/PO centric Acceptance criteria steps can be encapsulated by Step definition file inheriting TechTalk.SpecFlow.Steps ("Compare electricity and gas prices" feature created using such method)
 
-  2.	Scenario Outline Examples used to extract maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. As Identified SelectCurrentEnergySupplier.feature are (marked as ignored) however I’ve reused the steps as my background  for other test. I have in total 11 different possiblities.
+  2.	Scenario Outline Examples used to extract maximum possible coverage out of 3 scenarios. View model is dynamic based on the inputs in your supplier, Your Energy page. As Identified SelectCurrentEnergySupplier.feature are (marked as ignored) however I’ve reused the steps as my background  for other test. I have in total 11 different possibilities.
 ![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
 
   3. In my opinion the key user journey we need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
@@ -124,13 +124,13 @@ Framework developed based on following principle:
 
 Caveat:
 ------
-Readability is not the best for these tests but as mentioned these can be broken down and encapsulated (using specflow) with little effort. Having said that it is really easy to follow all the possible outcome with one quick look in the example table and '<placeholder>' value can easyly be replaced with actual value to improve readabilty. 
+Readability is not the best for these tests but as mentioned these can be broken down and encapsulated (using specflow) with little effort. Having said that it is really easy to follow all the possible outcome with one quick look in the example table and '<placeholder>' value can easily be replaced with actual value to improve readability. 
 
 Step are written in first person and often form a grammatically correct sentence
 
 Edge cases not tested
 ----------------------
-FOllowing seemed to me lower priority than 3 I've already identified as these may not the most common user journey.
+Following seemed to me lower priority than 3 I've already identified as these may not be the most common user journey.
 
 Scenario: Compare electricity and gas prices without bill
 Scenario: Compare electricity and gas prices without bill and current usage
@@ -141,11 +141,9 @@ Given-When-Then:
 I tried to follow Setup (Given), Exercise (When), Verify (Then) method for my Gherkgin syntax
 
 Improvement:
+
 I have tried make sure Ive written clean code and following good practises such (DRY, SOLID) with best of my abilities. 
 
-An obvious improvement for this framework will be bespoke Inversion of control and dependency injection to support parallel testing.
+ + An obvious improvement for this framework will be bespoke Inversion of control and dependency injection to support parallel testing.
 
-Create multiple interface implement abstract factory pattern to support IE browser script for reduced maintainability
-
-
-
+ + Create multiple interface implement abstract factory pattern to support IE browser script for reduced maintainability
