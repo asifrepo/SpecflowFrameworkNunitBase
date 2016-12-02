@@ -112,7 +112,7 @@ Framework developed based on following principle:
 
 ![Image of Yaktocat](https://github.com/ronocode/SpecflowFrameworkNunitBase/blob/master/Select%20Current%20Energy%20Supplier.png)
 
-   3. In my opinion the key user journey we need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
+  3. In my opinion the key user journey we need to cover is all the possible permutations and combination in your energy page to test view model changes accordingly and all user journeys are captured. Therefore I’ve created 3 features:
 
   +	 All the possible permutation and combination of user journey for electricity 
   +	 All the possible permutation and combination of user journey for Gas 
