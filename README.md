@@ -90,9 +90,10 @@ Framework developed based on following principle:
 ------------------------------------------------
  1. Usability: How easy it is to write tests so that its quicker for a new member to follow  
  Solution is broken down to following folders:
- + Feature: all the feature files
- + Steps: step definition –no selenium references only the page classes and fluent assertion, usually each step definition only have one            responsibility
- + Pages: Most of the selenium references in there. Pages are mapped using Page object model, Page elements separated where possible.   
+ 
+  +  Feature: all the feature files
+  +  Steps: step definition –no selenium references only the page classes and fluent assertion, usually each step definition only have   one  responsibility
+  + Pages: Most of the selenium references in there. Pages are mapped using Page object model, Page elements separated where possible.   
 
 2.	Maintainability : 
   + Static method outside framework avoided 
