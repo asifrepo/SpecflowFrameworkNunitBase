@@ -17,7 +17,32 @@
 
 Configuration 
 -------------
-# FrameWork
+  Settings/Settings.csx file is used to manage Base Url, current browser and capabilities for remote browser and Grid url. Test based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
+
+
+```
+#r "CompareTheMarket.dll"
+using CompareTheMarket;
+
+Add("Baseurl", "https://www.comparethemarket.com/energy/v2/?AFFCLIE=TST");
+
+Add("Browser", "chrome");
+
+//Grid url for selenium Grid
+Add("GridUrl", "http://****:**/wd/hub");
+
+ Dictionary<string, object> setup = new Dictionary<string, object>
+ {        
+  {"browserName" ,"chrome"},
+  {"version" ,""},
+  {"platform" ,""}      
+ };
+
+Add("Capabilities", setup);
+
+Add("ScreenRecord","off")
+
+```
 
 Components:
 -----------
@@ -56,6 +81,7 @@ Package.config:
   <package id="Pickles" version="2.10.0" />
   <package id="ReportUnit" version="1.2.1" />
   
+ # FrameWork
 Framework developed based on following principle:
 ------------------------------------------------
 1.	Usability: How easy it is to write scripts. Solution is broken down to following folders:
