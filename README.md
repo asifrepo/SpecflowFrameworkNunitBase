@@ -15,7 +15,7 @@
 
 Configuration 
 -------------
-Settings/Settings.csx file is used to manage* Baseurl*, current *Browser* and capabilities for remote browser and Grid url.However this solution based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
+Settings/Settings.csx file is used to manage *Baseurl*, current *Browser* and *Capabilities* for remote browser and Grid url.Even though  remote driver is implmeneted but for clarity of this solution based on chrome browser in local machine. Screen record option is turned off because it requires Microsoft Expression Encoder 4 (requires window media player installtion) 
 
 ```
 #r "CompareTheMarket.dll"
